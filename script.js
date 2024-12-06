@@ -34,14 +34,12 @@ const editMsg = (oldTask) => {
     const cancelEditBtn = document.querySelector(".cancel-edit");
     const saveEditBtn = document.getElementById("save-edit");
 
-    // Eliminar listeners previos si existen
     if (saveEditHandler) {
         saveEditBtn.removeEventListener("click", saveEditHandler);
     }
 
     cancelEditBtn.addEventListener("click", toggleEditModal);
 
-    // Nueva función para manejar el guardado
     saveEditHandler = () => {
         const newTask = document.getElementById("task-edit").value;
 
@@ -62,7 +60,6 @@ const editMsg = (oldTask) => {
         document.getElementById("task-edit").value = "";
     };
 
-    // Agregar el nuevo listener
     saveEditBtn.addEventListener("click", saveEditHandler);
 };
 
@@ -214,12 +211,6 @@ const addTask = () => {
     currentTask.nextTaskId();
 }
 
-
-/*
-
--cambiar lo de task por una id
-
-*/
 
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(()=>{
