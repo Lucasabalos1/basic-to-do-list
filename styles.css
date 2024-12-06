@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: #000;
+    background: #eee;
+    height: 100vh;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 20px;
+}
+
+.app-cont{
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.title-app{
+    text-align: center;
+    background: #000;
+}
+
+.title-app span{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.cont-app{
+    padding: 5px;
+}
+
+.input-cont{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.input-task{
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+}
+
+.submit-task{
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: none;
+}
+
+.list-cont{
+    padding: 0 10px;
+    list-style: none;
+}
+
+.task-cont{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+}
+
+.task{
+    width: 70%;
+}
+
+.task span{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.btn-cont{
+    width: 30%;
+    text-align: end;
+}
+
+.edit{
+    background: #5cf;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+}
+
+.delete{
+    background: #f22;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.task-complete:checked + .task-title{
+    text-decoration: line-through;
+}
+
+/*Modal email styles start*/
+
+
+.modal-background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s all linear;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%; 
+    padding: 20px;
+}
+
+.register-form,
+.login-form {
+    background: #eee;
+    min-width: 100px; 
+    max-width: 700px; 
+    width: 100%; 
+    border: 1px solid black;
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.user-cont,
+.password-cont,
+.repeat-password-cont{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.user-cont label,
+.password-cont label,
+.repeat-password-cont label{
+    color: #123;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.user-cont input,
+.password-cont input,
+.repeat-password-cont input{
+    padding: 5px;
+}
+
+.redirect-btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.register-redirect,
+.login-redirect{
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid black;
+}
+
+.submit-login,
+.submit-register{
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+}
+
+.hidden-form{
+    display: none;
+}
+
+.form-title{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #222;
+
+}
+
+.close-modal{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+}
+
+.close-modal i{
+    color: #f22;
+    font-size: 1.3rem;
+}
+
+/*Modal email styles end*/
+
+/*Modal edit styles start*/
+
+.edit-modal-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all linear;
+}
+
+.show-edit{
+    opacity: 1;
+    visibility: visible;
+}
+
+.edit-modal{
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 4px;
+    border: 1px dashed black;
+}
+
+.input-edit-cont{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input-edit-cont label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-edit-cont input{
+    padding: 5px;
+    height: 30px;
+}
+
+.btns-cont{
+    padding: 0 10px 10px 10px;
+}
+
+.cancel-edit{
+    margin-right: 10px;
+    width: 70px;
+    padding: 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+}
+
+#save-edit{
+    width: 70px;
+    padding: 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #1b29ea;
+    color: #fff;
+}
+
+/*Modal edit styles end*/
+
+.task_id{
+    display: none;
+}

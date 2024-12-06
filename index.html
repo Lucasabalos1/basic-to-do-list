@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c82c5bef31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="app-cont">
+            <div class="title-app">
+                <span>TODO LIST</span>
+            </div>
+            
+            <div class="cont-app">
+                <div class="input-cont">
+                    <input type="text" class="input-task" placeholder="Ingrese su tarea">
+                    <button class="submit-task" id="submit-task">Añadir</button>
+                </div>
+    
+                <ul class="list-cont">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-background">
+        <div class="modal-cont">
+
+            <div class="close-modal">
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+            <div class="login-form">
+                <div class="form-title"><span>LOGIN</span></div>
+                <form id="login-form">
+                    <div class="user-cont">
+                        <label for="user-email-log">User email:</label>
+                        <input type="email" name="user-mail" id="user-email-log" placeholder="Enter your email" required>
+                    </div>
+                    <div class="password-cont">
+                        <label for="user-password-log">Password:</label>
+                        <input type="password" name="user-password" id="user-password-log" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="redirect-btns">
+                        <button class="register-redirect">Register</button>
+                        <button class="submit-login" id="submit-login">Login</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="register-form hidden-form">
+                <div class="form-title"><span>REGISTER</span></div>
+                <form id="register-form">
+                    <div class="user-cont">
+                        <label for="user-email-reg">User email:</label>
+                        <input type="email" name="user-mail" id="user-email-reg" placeholder="Enter your email" required>
+                    </div>
+                    <div class="password-cont">
+                        <label for="user-password-reg">Password:</label>
+                        <input type="password" name="user-password" id="user-password-reg" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="repeat-password-cont">
+                        <label for="user-repeat-password-reg">Password:</label>
+                        <input type="password" name="user-password" id="user-repeat-password-reg" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="redirect-btns">
+                        <button class="login-redirect">Login</button>
+                        <button type="submit" class="submit-register" id="submit-register">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit-modal-background">
+        <div class="edit-modal">
+            <div class="input-edit-cont">
+                <label for="task-edit">Edit your task</label>
+                <input type="text" id="task-edit" placeholder="Enter your task edit">
+            </div>
+
+            <div class="btns-cont">
+                <button class="cancel-edit">CANCEL</button>
+                <BUTTon id="save-edit">SAVE</BUTTon>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
